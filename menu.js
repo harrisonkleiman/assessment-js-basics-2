@@ -31,8 +31,14 @@
 */
 
 //CODE HERE
-
-
+let pizza = {
+  name: "pepperoni",
+  price: 3,
+  category: "entree",
+  popularity: 2,
+  ranking: 4.5,
+  tags: ["kids", "gluten-free"],
+}
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +49,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +59,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]) // gluten-free
 
 /*
     Third, destructure the price off of the
@@ -63,7 +69,9 @@
 */
 
 //CODE HERE
-
+delete pizza.price
+pizza.price = 2.5
+console.log(pizza.price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,8 +96,13 @@
 */
 
 //CODE HERE
-
-
+let foodArr = [
+  { category: "appetizer" },
+  { price: 7 },
+  { popularity: 5 },
+  { rating: 4 },
+  { tags: "vegan" },
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +118,11 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(foodObjs => {
+  return foodObjs.tags === "vegan"
+})
+
+
 
 
 
@@ -158,4 +175,4 @@
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+//CODE HERE 

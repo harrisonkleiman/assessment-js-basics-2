@@ -126,6 +126,8 @@ const deals = [
 */
 
 //CODE HERE
+
+//note to self: try deals.title in if state. NOT deals.desc
 const newDeal = deals.map((deals) => {
   if (deals.title === "15% Off!") {
     deals.title = deals.title.replace("15", "10")
@@ -133,7 +135,7 @@ const newDeal = deals.map((deals) => {
   return deals
 })
 
-
+// console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -148,4 +150,11 @@ const newDeal = deals.map((deals) => {
 */
 
 //CODE HERE
+const familyDeal = deals.map((deals) => {
+  if (deals.title === "Free Kids Meal with 2 Regular Entrees") {
+    deals.desc = deals.desc.replace("March", "April")
+  }
+  return deals
+})
 
+console.log(deals)
