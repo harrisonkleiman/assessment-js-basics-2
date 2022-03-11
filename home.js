@@ -22,10 +22,11 @@
 */
 
 //CODE HERE
+const greetUser = (userName) => {
+  return `Welcome back, ${userName}`
+}
 
-
-
-
+// console.log(greetUser("Andrew"))
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -50,8 +51,15 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+const canWeDeliver = (zipCode) => {
+  if (deliveryAreaZipCodes.includes(zipCode)) {
+    return `You're in our delivery zone!`
+  } else {
+    return `Sorry, we can't deliver to that address`
+  }
+}
 
-
+// console.log(canWeDeliver(85204))
 
 /* 
     Problem 2 Continued
@@ -71,7 +79,18 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = (zipCode) => {
+  for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+    if (deliveryAreaZipCodes[i] === zipCode) {
+      return `You're in our delivery zone!`
+    } else {
+      return `Sorry, we can't deliver to that address`
+    }
+  }
+}
 
+// console.log(canWeDeliverTwo(85204))
+// console.log(canWeDeliverTwo(14226))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -87,14 +106,14 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 const deals = [
-    {
-        title: '15% Off!', 
-        desc: 'Applied to your entire order when you spend $30 or more'
-    }, 
-    {
-        title: 'Free Kids Meal with 2 Regular Entrees', 
-        desc: '   This deal lasts until the end of March! '
-    }
+  {
+    title: "15% Off!",
+    desc: "Applied to your entire order when you spend $30 or more",
+  },
+  {
+    title: "Free Kids Meal with 2 Regular Entrees",
+    desc: "   This deal lasts until the end of March! ",
+  },
 ]
 
 /*
@@ -107,7 +126,12 @@ const deals = [
 */
 
 //CODE HERE
-
+const newDeal = deals.map((deals) => {
+  if (deals.title === "15% Off!") {
+    deals.title = deals.title.replace("15", "10")
+  }
+  return deals
+})
 
 
 /*
@@ -124,3 +148,4 @@ const deals = [
 */
 
 //CODE HERE
+
