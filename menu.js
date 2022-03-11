@@ -101,7 +101,7 @@ let foodArr = [
   { price: 7 },
   { popularity: 5 },
   { rating: 4 },
-  { tags: "vegan" },
+  { tags: ["vegan", "GMO free"] },
 ]
 
 //////////////////PROBLEM 4////////////////////
@@ -118,13 +118,11 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(foodObjs => {
+const filteredFood = foodArr.filter((foodObjs) => {
   return foodObjs.tags === "vegan"
 })
 
-
-
-
+// console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -166,7 +164,18 @@ const filteredFood = foodArr.filter(foodObjs => {
 */
 
 //CODE HERE
+// note to self: dot notation doesn't work => brackets?
 
+const filterByProperty = (property, num, type) => {
+  let filteredArr = food.Arr.filter((food) => {
+    if (type === "above") {
+      return food[property] > num
+    } else if (type !== "below") {
+      return food[property] < num
+    }
+    return filteredArr
+  })
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -175,4 +184,8 @@ const filteredFood = foodArr.filter(foodObjs => {
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE 
+//CODE HERE
+// property = popularity, rating, etc??
+// type = above or below??
+filterByProperty("popularity", 3, "above")
+// console.log(filteredArr)

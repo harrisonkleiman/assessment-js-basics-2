@@ -34,7 +34,8 @@ const cart = [
 ]
 
 //CODE HERE
-
+// need accumulator
+// loop?
 const summedPrice = cart.reduce(acc => acc+ cart.price, 0)
 
 
@@ -86,7 +87,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
     TEXT ANSWER HERE
     - name: string val (to confirm customer identity by first and last name)
     - email: string val (to send digital receipt, log in ID for mobile site)
-    - - password: number val (to confrim/verify account is used by email owner)
+    - password: number val (to confrim/verify account is used by email owner)
     - phone number: number val (direct contact information if needed notification regarding order)
     - credit card/debit card: number val (To allow customer to pay for order digitally)
 */
@@ -99,7 +100,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
 //CODE HERE
 
 const customer = {
-    name: 'Harry',
+    name: 'Homer',
     email: 'someone@gmail.com',
     phone: 1112222222,
     address: '742 Evergreen Terrace',

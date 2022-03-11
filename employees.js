@@ -42,7 +42,8 @@ class Employee {
 */
 
 //CODE HERE
-const empOne = new Employee('David', 'weekday mornings')
+const empOne = new Employee("Jess", "weekday mornings")
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
